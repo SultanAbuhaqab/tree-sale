@@ -31,6 +31,29 @@
 
     Private Sub frmTreeSale_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadControlArrays()
+    End Sub
 
+    Private Sub radTreeTypes_CheckedChanged(sender As Object, e As EventArgs) Handles radKeyLime.CheckedChanged,
+            radPersianLime.CheckedChanged, radMeyerLemon.CheckedChanged
+        Dim rad As RadioButton
+        rad = DirectCast(sender, RadioButton)
+
+        If rad.Checked Then
+            Dim strTreePreviewImage As String
+
+            strTreeType = rad.Text
+
+            If strTreeType = arrRadTreeType(0).Text Then
+                decTreeCost = KEY_LIME_PRICE
+                strTreePreviewImage = "key_lime.jpg"
+            ElseIf strTreeType = arrRadTreeType(1).Text Then
+                decTreeCost = PERSIAN_LIME_PRICE
+                strTreePreviewImage = "persian_lime.jpg"
+            Else
+                decTreeCost = MEYER_LEMON_PRICE
+                strTreePreviewImage = "meyer_lemon.jpg"
+            End If
+            picTreePreview.Load("Resources\" & strTreePreviewImage)
+        End If
     End Sub
 End Class

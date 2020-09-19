@@ -120,5 +120,14 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meyer_lemon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persian_lime.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key_lime.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

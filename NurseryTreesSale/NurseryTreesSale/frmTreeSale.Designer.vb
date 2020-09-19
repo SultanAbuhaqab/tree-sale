@@ -24,12 +24,13 @@ Partial Class frmTreeSale
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.picTreePreview = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.chkPlanting = New System.Windows.Forms.CheckBox()
         Me.chkDelivery = New System.Windows.Forms.CheckBox()
         Me.txtNumberOfTrees = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.radMeyerLemon = New System.Windows.Forms.RadioButton()
         Me.radPersianLime = New System.Windows.Forms.RadioButton()
@@ -44,22 +45,21 @@ Partial Class frmTreeSale
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.picTreePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label1.Location = New System.Drawing.Point(47, 9)
+        Me.Label1.Location = New System.Drawing.Point(46, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(509, 45)
+        Me.Label1.Size = New System.Drawing.Size(521, 45)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nursery Tree Sale"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -71,12 +71,31 @@ Partial Class frmTreeSale
         Me.GroupBox1.Controls.Add(Me.txtNumberOfTrees)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(47, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(46, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(509, 295)
+        Me.GroupBox1.Size = New System.Drawing.Size(521, 295)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Order Details"
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.picTreePreview)
+        Me.GroupBox5.Location = New System.Drawing.Point(254, 20)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(239, 256)
+        Me.GroupBox5.TabIndex = 5
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Tree Preview"
+        '
+        'picTreePreview
+        '
+        Me.picTreePreview.Location = New System.Drawing.Point(6, 23)
+        Me.picTreePreview.Name = "picTreePreview"
+        Me.picTreePreview.Size = New System.Drawing.Size(227, 227)
+        Me.picTreePreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picTreePreview.TabIndex = 1
+        Me.picTreePreview.TabStop = False
         '
         'GroupBox3
         '
@@ -124,14 +143,6 @@ Partial Class frmTreeSale
         Me.Label2.Size = New System.Drawing.Size(86, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Number of Trees"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(6, 23)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(206, 227)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'GroupBox2
         '
@@ -186,9 +197,9 @@ Partial Class frmTreeSale
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.Controls.Add(Me.txtName)
         Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Location = New System.Drawing.Point(47, 389)
+        Me.GroupBox4.Location = New System.Drawing.Point(46, 389)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(509, 128)
+        Me.GroupBox4.Size = New System.Drawing.Size(521, 128)
         Me.GroupBox4.TabIndex = 2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Customer Details"
@@ -215,21 +226,21 @@ Partial Class frmTreeSale
         '
         Me.TextBox2.Location = New System.Drawing.Point(70, 99)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(400, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(417, 20)
         Me.TextBox2.TabIndex = 8
         '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(72, 65)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(400, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(415, 20)
         Me.TextBox1.TabIndex = 7
         '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(70, 31)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(400, 20)
+        Me.txtName.Size = New System.Drawing.Size(417, 20)
         Me.txtName.TabIndex = 6
         '
         'Label3
@@ -247,7 +258,7 @@ Partial Class frmTreeSale
         Me.btnSummary.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSummary.ForeColor = System.Drawing.Color.White
-        Me.btnSummary.Location = New System.Drawing.Point(47, 544)
+        Me.btnSummary.Location = New System.Drawing.Point(46, 544)
         Me.btnSummary.Name = "btnSummary"
         Me.btnSummary.Size = New System.Drawing.Size(126, 23)
         Me.btnSummary.TabIndex = 9
@@ -259,7 +270,7 @@ Partial Class frmTreeSale
         Me.btnClear.BackColor = System.Drawing.Color.MidnightBlue
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Location = New System.Drawing.Point(191, 544)
+        Me.btnClear.Location = New System.Drawing.Point(190, 544)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(126, 23)
         Me.btnClear.TabIndex = 10
@@ -271,28 +282,18 @@ Partial Class frmTreeSale
         Me.btnExit.BackColor = System.Drawing.Color.Crimson
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(335, 544)
+        Me.btnExit.Location = New System.Drawing.Point(334, 544)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(126, 23)
         Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.PictureBox1)
-        Me.GroupBox5.Location = New System.Drawing.Point(254, 20)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(218, 256)
-        Me.GroupBox5.TabIndex = 5
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Tree Preview"
-        '
         'frmTreeSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(603, 606)
+        Me.ClientSize = New System.Drawing.Size(612, 606)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnClear)
@@ -305,14 +306,14 @@ Partial Class frmTreeSale
         Me.Text = "Florida Exotic Citrus Nursery Tree Sale"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        CType(Me.picTreePreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -324,7 +325,7 @@ Partial Class frmTreeSale
     Friend WithEvents chkDelivery As CheckBox
     Friend WithEvents txtNumberOfTrees As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picTreePreview As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents radMeyerLemon As RadioButton
     Friend WithEvents radPersianLime As RadioButton

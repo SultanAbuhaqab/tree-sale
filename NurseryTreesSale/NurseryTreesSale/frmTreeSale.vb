@@ -83,4 +83,54 @@
         'clear the variables
 
     End Sub
+
+    Private Sub btnSummary_Click(sender As Object, e As EventArgs) Handles btnSummary.Click
+        Dim binErrors As Boolean
+        errP.Clear()
+
+        'validate that the tree type radio buttons was selected
+        If strTreeType = "" Then
+            errP.SetError(grpTreeTypes, "You must select a tree type")
+            binErrors = True
+        End If
+
+        'validate the number of tree text box
+        If Not IsNumeric(txtNumberOfTrees.Text) Then
+            errP.SetError(txtNumberOfTrees, "The number of trees must be numeric")
+            binErrors = True
+        ElseIf txtNumberOfTrees.Text > 5 Or txtNumberOfTrees.Text < 1 Then
+            errP.SetError(txtNumberOfTrees, "The number of trees ordered must be not more than 5 and greater than 0")
+            binErrors = True
+        End If
+
+        'validate the name text box
+        If txtName.Text = "" Then
+            errP.SetError(txtName, "You must provide your name")
+            binErrors = True
+        End If
+
+        'validate the phone text box
+        If txtPhone.Text = "" Then
+            errP.SetError(txtPhone, "You must provide your phone number")
+            binErrors = True
+        End If
+
+        'validate the address text box
+        If txtAddress.Text = "" Then
+            errP.SetError(txtAddress, "You must provide your address")
+            binErrors = True
+        End If
+
+
+
+
+
+
+
+        ' check if we have validation errors and exit subroutine
+        If binErrors Then
+            Exit Sub
+        End If
+
+    End Sub
 End Class

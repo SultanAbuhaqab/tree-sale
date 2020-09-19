@@ -22,6 +22,7 @@ Partial Class frmTreeSale
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -31,7 +32,7 @@ Partial Class frmTreeSale
         Me.chkDelivery = New System.Windows.Forms.CheckBox()
         Me.txtNumberOfTrees = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.grpTreeTypes = New System.Windows.Forms.GroupBox()
         Me.radMeyerLemon = New System.Windows.Forms.RadioButton()
         Me.radPersianLime = New System.Windows.Forms.RadioButton()
         Me.radKeyLime = New System.Windows.Forms.RadioButton()
@@ -45,12 +46,14 @@ Partial Class frmTreeSale
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.picTreePreview, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.grpTreeTypes.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -70,7 +73,7 @@ Partial Class frmTreeSale
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.txtNumberOfTrees)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.grpTreeTypes)
         Me.GroupBox1.Location = New System.Drawing.Point(46, 73)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(521, 295)
@@ -144,17 +147,17 @@ Partial Class frmTreeSale
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Number of Trees"
         '
-        'GroupBox2
+        'grpTreeTypes
         '
-        Me.GroupBox2.Controls.Add(Me.radMeyerLemon)
-        Me.GroupBox2.Controls.Add(Me.radPersianLime)
-        Me.GroupBox2.Controls.Add(Me.radKeyLime)
-        Me.GroupBox2.Location = New System.Drawing.Point(19, 20)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(209, 100)
-        Me.GroupBox2.TabIndex = 0
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Tree Type"
+        Me.grpTreeTypes.Controls.Add(Me.radMeyerLemon)
+        Me.grpTreeTypes.Controls.Add(Me.radPersianLime)
+        Me.grpTreeTypes.Controls.Add(Me.radKeyLime)
+        Me.grpTreeTypes.Location = New System.Drawing.Point(19, 20)
+        Me.grpTreeTypes.Name = "grpTreeTypes"
+        Me.grpTreeTypes.Size = New System.Drawing.Size(209, 100)
+        Me.grpTreeTypes.TabIndex = 0
+        Me.grpTreeTypes.TabStop = False
+        Me.grpTreeTypes.Text = "Tree Type"
         '
         'radMeyerLemon
         '
@@ -163,7 +166,6 @@ Partial Class frmTreeSale
         Me.radMeyerLemon.Name = "radMeyerLemon"
         Me.radMeyerLemon.Size = New System.Drawing.Size(89, 17)
         Me.radMeyerLemon.TabIndex = 3
-        Me.radMeyerLemon.TabStop = True
         Me.radMeyerLemon.Text = "Meyer Lemon"
         Me.radMeyerLemon.UseVisualStyleBackColor = True
         '
@@ -174,7 +176,6 @@ Partial Class frmTreeSale
         Me.radPersianLime.Name = "radPersianLime"
         Me.radPersianLime.Size = New System.Drawing.Size(85, 17)
         Me.radPersianLime.TabIndex = 2
-        Me.radPersianLime.TabStop = True
         Me.radPersianLime.Text = "Persian Lime"
         Me.radPersianLime.UseVisualStyleBackColor = True
         '
@@ -185,7 +186,6 @@ Partial Class frmTreeSale
         Me.radKeyLime.Name = "radKeyLime"
         Me.radKeyLime.Size = New System.Drawing.Size(68, 17)
         Me.radKeyLime.TabIndex = 1
-        Me.radKeyLime.TabStop = True
         Me.radKeyLime.Text = "Key Lime"
         Me.radKeyLime.UseVisualStyleBackColor = True
         '
@@ -289,6 +289,10 @@ Partial Class frmTreeSale
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'errP
+        '
+        Me.errP.ContainerControl = Me
+        '
         'frmTreeSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,10 +314,11 @@ Partial Class frmTreeSale
         CType(Me.picTreePreview, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.grpTreeTypes.ResumeLayout(False)
+        Me.grpTreeTypes.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.errP, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -326,7 +331,7 @@ Partial Class frmTreeSale
     Friend WithEvents txtNumberOfTrees As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents picTreePreview As PictureBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grpTreeTypes As GroupBox
     Friend WithEvents radMeyerLemon As RadioButton
     Friend WithEvents radPersianLime As RadioButton
     Friend WithEvents radKeyLime As RadioButton
@@ -341,4 +346,5 @@ Partial Class frmTreeSale
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents errP As ErrorProvider
 End Class

@@ -42,6 +42,7 @@ Partial Class frmTreeSale
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnSummary = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class frmTreeSale
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGreen
-        Me.Label1.Location = New System.Drawing.Point(52, 9)
+        Me.Label1.Location = New System.Drawing.Point(47, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(509, 45)
         Me.Label1.TabIndex = 0
@@ -68,7 +69,7 @@ Partial Class frmTreeSale
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(52, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(47, 73)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(509, 295)
         Me.GroupBox1.TabIndex = 1
@@ -92,10 +93,10 @@ Partial Class frmTreeSale
         Me.radKeyLime.AutoSize = True
         Me.radKeyLime.Location = New System.Drawing.Point(7, 20)
         Me.radKeyLime.Name = "radKeyLime"
-        Me.radKeyLime.Size = New System.Drawing.Size(68, 17)
+        Me.radKeyLime.Size = New System.Drawing.Size(110, 17)
         Me.radKeyLime.TabIndex = 0
         Me.radKeyLime.TabStop = True
-        Me.radKeyLime.Text = "Key Lime"
+        Me.radKeyLime.Text = "Key Lime ($15.95)"
         Me.radKeyLime.UseVisualStyleBackColor = True
         '
         'radPersianLime
@@ -103,10 +104,10 @@ Partial Class frmTreeSale
         Me.radPersianLime.AutoSize = True
         Me.radPersianLime.Location = New System.Drawing.Point(6, 43)
         Me.radPersianLime.Name = "radPersianLime"
-        Me.radPersianLime.Size = New System.Drawing.Size(85, 17)
+        Me.radPersianLime.Size = New System.Drawing.Size(127, 17)
         Me.radPersianLime.TabIndex = 1
         Me.radPersianLime.TabStop = True
-        Me.radPersianLime.Text = "Persian Lime"
+        Me.radPersianLime.Text = "Persian Lime ($12.95)"
         Me.radPersianLime.UseVisualStyleBackColor = True
         '
         'radMeyerLemon
@@ -114,10 +115,10 @@ Partial Class frmTreeSale
         Me.radMeyerLemon.AutoSize = True
         Me.radMeyerLemon.Location = New System.Drawing.Point(7, 66)
         Me.radMeyerLemon.Name = "radMeyerLemon"
-        Me.radMeyerLemon.Size = New System.Drawing.Size(89, 17)
+        Me.radMeyerLemon.Size = New System.Drawing.Size(131, 17)
         Me.radMeyerLemon.TabIndex = 2
         Me.radMeyerLemon.TabStop = True
-        Me.radMeyerLemon.Text = "Meyer Lemon"
+        Me.radMeyerLemon.Text = "Meyer Lemon ($13.95)"
         Me.radMeyerLemon.UseVisualStyleBackColor = True
         '
         'PictureBox1
@@ -160,9 +161,9 @@ Partial Class frmTreeSale
         Me.chkDelivery.AutoSize = True
         Me.chkDelivery.Location = New System.Drawing.Point(7, 20)
         Me.chkDelivery.Name = "chkDelivery"
-        Me.chkDelivery.Size = New System.Drawing.Size(64, 17)
+        Me.chkDelivery.Size = New System.Drawing.Size(91, 17)
         Me.chkDelivery.TabIndex = 0
-        Me.chkDelivery.Text = "Delivery"
+        Me.chkDelivery.Text = "Delivery ($10)"
         Me.chkDelivery.UseVisualStyleBackColor = True
         '
         'chkPlanting
@@ -170,9 +171,9 @@ Partial Class frmTreeSale
         Me.chkPlanting.AutoSize = True
         Me.chkPlanting.Location = New System.Drawing.Point(7, 44)
         Me.chkPlanting.Name = "chkPlanting"
-        Me.chkPlanting.Size = New System.Drawing.Size(64, 17)
+        Me.chkPlanting.Size = New System.Drawing.Size(124, 17)
         Me.chkPlanting.TabIndex = 1
-        Me.chkPlanting.Text = "Planting"
+        Me.chkPlanting.Text = "Planting ($8 per tree)"
         Me.chkPlanting.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -183,7 +184,7 @@ Partial Class frmTreeSale
         Me.GroupBox4.Controls.Add(Me.TextBox1)
         Me.GroupBox4.Controls.Add(Me.txtName)
         Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Location = New System.Drawing.Point(52, 389)
+        Me.GroupBox4.Location = New System.Drawing.Point(47, 389)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(509, 128)
         Me.GroupBox4.TabIndex = 2
@@ -241,24 +242,37 @@ Partial Class frmTreeSale
         'btnSummary
         '
         Me.btnSummary.BackColor = System.Drawing.Color.DarkGreen
+        Me.btnSummary.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSummary.ForeColor = System.Drawing.Color.White
-        Me.btnSummary.Location = New System.Drawing.Point(52, 544)
+        Me.btnSummary.Location = New System.Drawing.Point(47, 544)
         Me.btnSummary.Name = "btnSummary"
         Me.btnSummary.Size = New System.Drawing.Size(126, 23)
         Me.btnSummary.TabIndex = 3
         Me.btnSummary.Text = "View Cost Summary"
         Me.btnSummary.UseVisualStyleBackColor = False
         '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.White
+        Me.btnClear.Location = New System.Drawing.Point(191, 544)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(126, 23)
+        Me.btnClear.TabIndex = 4
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
         'btnExit
         '
         Me.btnExit.BackColor = System.Drawing.Color.Crimson
         Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(198, 544)
+        Me.btnExit.Location = New System.Drawing.Point(335, 544)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(126, 23)
-        Me.btnExit.TabIndex = 4
+        Me.btnExit.TabIndex = 5
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -269,11 +283,13 @@ Partial Class frmTreeSale
         Me.ClientSize = New System.Drawing.Size(603, 606)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSummary)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmTreeSale"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Florida Exotic Citrus Nursery Tree Sale"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -308,5 +324,6 @@ Partial Class frmTreeSale
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnSummary As Button
+    Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
 End Class

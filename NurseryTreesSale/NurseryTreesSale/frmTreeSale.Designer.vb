@@ -116,9 +116,9 @@ Partial Class frmTreeSale
         Me.chkPlanting.AutoSize = True
         Me.chkPlanting.Location = New System.Drawing.Point(7, 44)
         Me.chkPlanting.Name = "chkPlanting"
-        Me.chkPlanting.Size = New System.Drawing.Size(124, 17)
+        Me.chkPlanting.Size = New System.Drawing.Size(64, 17)
         Me.chkPlanting.TabIndex = 6
-        Me.chkPlanting.Text = "Planting ($8 per tree)"
+        Me.chkPlanting.Text = "Planting"
         Me.chkPlanting.UseVisualStyleBackColor = True
         '
         'chkDelivery
@@ -126,9 +126,9 @@ Partial Class frmTreeSale
         Me.chkDelivery.AutoSize = True
         Me.chkDelivery.Location = New System.Drawing.Point(7, 20)
         Me.chkDelivery.Name = "chkDelivery"
-        Me.chkDelivery.Size = New System.Drawing.Size(91, 17)
+        Me.chkDelivery.Size = New System.Drawing.Size(64, 17)
         Me.chkDelivery.TabIndex = 5
-        Me.chkDelivery.Text = "Delivery ($10)"
+        Me.chkDelivery.Text = "Delivery"
         Me.chkDelivery.UseVisualStyleBackColor = True
         '
         'txtNumberOfTrees

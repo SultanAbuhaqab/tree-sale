@@ -12,13 +12,6 @@
 
     Private strTreeType As String
     Private decTreeCost As Decimal
-    Private intNumberOfTrees As Integer
-    Private intDeliveryCost As Integer
-    Private intPlantingCost As Integer
-
-    Private strName As String
-    Private strPhone As String
-    Private strAddress As String
 
     Private Sub LoadControlArrays()
         arrRadTreeType(0) = radKeyLime
@@ -64,37 +57,74 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         Dim i As Integer
 
-        'clear the radio buttons
+        'Clear the radio buttons
         For i = 0 To arrRadTreeType.Length - 1
             arrRadTreeType(i).Checked = False
         Next
 
-        'clear the check boxes
+        'Clear the picture box
+        picTreePreview.Image = Nothing
+
+        'Clear the check boxes
         For i = 0 To arrChkAdditionalServices.Length - 1
             arrChkAdditionalServices(i).Checked = False
         Next
 
-        'clear the text boxes
+        'Clear the text boxes
         txtNumberOfTrees.Clear()
         txtName.Clear()
         txtPhone.Clear()
         txtAddress.Clear()
 
-        'clear the variables
+        'Clear the variables
+        strTreeType = ""
+        decTreeCost = ""
 
     End Sub
 
     Private Sub btnSummary_Click(sender As Object, e As EventArgs) Handles btnSummary.Click
-        Dim binErrors As Boolean
+        Dim decTotalCost As Decimal
+        Dim decTotalNetCost As Decimal
+        Dim decTreePurchaseCost As Decimal
+        Dim intDeliveryFee As Integer
+        Dim intPlantingFee As Integer
+
         errP.Clear()
 
-        'validate that the tree type radio buttons was selected
+        'Check if we have validation errors and exit subroutine
+        If ValidateData() Then
+            Exit Sub
+        End If
+
+        'Calculate the tree purchase cost
+        decTreePurchaseCost = decTreeCost * txtNumberOfTrees.Text
+
+        'Calculate the delivery fee cost
+        If chkDelivery.Checked Then
+            intDeliveryFee = DELIVERY_FEE
+        End If
+
+        'Calculate the planting fee cost
+        If chkPlanting.Checked Then
+            intPlantingFee = txtNumberOfTrees.Text * PLANTING_FEE
+        End If
+
+        decTotalCost = decTreePurchaseCost + intDeliveryFee + intPlantingFee
+
+        decTotalNetCost = decTotalCost * (100 + TAX_RATE) / 100
+
+    End Sub
+
+    Private Function ValidateData()
+        Dim binErrors As Boolean
+
+        'Validate that the tree type radio buttons was selected
         If strTreeType = "" Then
             errP.SetError(grpTreeTypes, "You must select a tree type")
             binErrors = True
         End If
 
-        'validate the number of tree text box
+        'Validate the number of tree text box
         If Not IsNumeric(txtNumberOfTrees.Text) Then
             errP.SetError(txtNumberOfTrees, "The number of trees must be numeric")
             binErrors = True
@@ -103,34 +133,25 @@
             binErrors = True
         End If
 
-        'validate the name text box
+        'Validate the name text box
         If txtName.Text = "" Then
             errP.SetError(txtName, "You must provide your name")
             binErrors = True
         End If
 
-        'validate the phone text box
+        'Validate the phone text box
         If txtPhone.Text = "" Then
             errP.SetError(txtPhone, "You must provide your phone number")
             binErrors = True
         End If
 
-        'validate the address text box
+        'Validate the address text box
         If txtAddress.Text = "" Then
             errP.SetError(txtAddress, "You must provide your address")
             binErrors = True
         End If
 
+        Return binErrors
 
-
-
-
-
-
-        ' check if we have validation errors and exit subroutine
-        If binErrors Then
-            Exit Sub
-        End If
-
-    End Sub
+    End Function
 End Class

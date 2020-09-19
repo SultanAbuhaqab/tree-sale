@@ -24,31 +24,33 @@ Partial Class frmTreeSale
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.radKeyLime = New System.Windows.Forms.RadioButton()
-        Me.radPersianLime = New System.Windows.Forms.RadioButton()
-        Me.radMeyerLemon = New System.Windows.Forms.RadioButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNumberOfTrees = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.chkDelivery = New System.Windows.Forms.CheckBox()
         Me.chkPlanting = New System.Windows.Forms.CheckBox()
+        Me.chkDelivery = New System.Windows.Forms.CheckBox()
+        Me.txtNumberOfTrees = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.radMeyerLemon = New System.Windows.Forms.RadioButton()
+        Me.radPersianLime = New System.Windows.Forms.RadioButton()
+        Me.radKeyLime = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -64,10 +66,10 @@ Partial Class frmTreeSale
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox5)
         Me.GroupBox1.Controls.Add(Me.GroupBox3)
         Me.GroupBox1.Controls.Add(Me.txtNumberOfTrees)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Location = New System.Drawing.Point(47, 73)
         Me.GroupBox1.Name = "GroupBox1"
@@ -75,6 +77,61 @@ Partial Class frmTreeSale
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Order Details"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.chkPlanting)
+        Me.GroupBox3.Controls.Add(Me.chkDelivery)
+        Me.GroupBox3.Location = New System.Drawing.Point(22, 206)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(206, 70)
+        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Additional Services"
+        '
+        'chkPlanting
+        '
+        Me.chkPlanting.AutoSize = True
+        Me.chkPlanting.Location = New System.Drawing.Point(7, 44)
+        Me.chkPlanting.Name = "chkPlanting"
+        Me.chkPlanting.Size = New System.Drawing.Size(124, 17)
+        Me.chkPlanting.TabIndex = 5
+        Me.chkPlanting.Text = "Planting ($8 per tree)"
+        Me.chkPlanting.UseVisualStyleBackColor = True
+        '
+        'chkDelivery
+        '
+        Me.chkDelivery.AutoSize = True
+        Me.chkDelivery.Location = New System.Drawing.Point(7, 20)
+        Me.chkDelivery.Name = "chkDelivery"
+        Me.chkDelivery.Size = New System.Drawing.Size(91, 17)
+        Me.chkDelivery.TabIndex = 4
+        Me.chkDelivery.Text = "Delivery ($10)"
+        Me.chkDelivery.UseVisualStyleBackColor = True
+        '
+        'txtNumberOfTrees
+        '
+        Me.txtNumberOfTrees.Location = New System.Drawing.Point(22, 167)
+        Me.txtNumberOfTrees.Name = "txtNumberOfTrees"
+        Me.txtNumberOfTrees.Size = New System.Drawing.Size(206, 20)
+        Me.txtNumberOfTrees.TabIndex = 3
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(19, 138)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(86, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Number of Trees"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(6, 23)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(206, 227)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'GroupBox2
         '
@@ -88,93 +145,38 @@ Partial Class frmTreeSale
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Tree Type"
         '
-        'radKeyLime
+        'radMeyerLemon
         '
-        Me.radKeyLime.AutoSize = True
-        Me.radKeyLime.Location = New System.Drawing.Point(7, 20)
-        Me.radKeyLime.Name = "radKeyLime"
-        Me.radKeyLime.Size = New System.Drawing.Size(110, 17)
-        Me.radKeyLime.TabIndex = 0
-        Me.radKeyLime.TabStop = True
-        Me.radKeyLime.Text = "Key Lime ($15.95)"
-        Me.radKeyLime.UseVisualStyleBackColor = True
+        Me.radMeyerLemon.AutoSize = True
+        Me.radMeyerLemon.Location = New System.Drawing.Point(7, 66)
+        Me.radMeyerLemon.Name = "radMeyerLemon"
+        Me.radMeyerLemon.Size = New System.Drawing.Size(89, 17)
+        Me.radMeyerLemon.TabIndex = 2
+        Me.radMeyerLemon.TabStop = True
+        Me.radMeyerLemon.Text = "Meyer Lemon"
+        Me.radMeyerLemon.UseVisualStyleBackColor = True
         '
         'radPersianLime
         '
         Me.radPersianLime.AutoSize = True
         Me.radPersianLime.Location = New System.Drawing.Point(6, 43)
         Me.radPersianLime.Name = "radPersianLime"
-        Me.radPersianLime.Size = New System.Drawing.Size(127, 17)
+        Me.radPersianLime.Size = New System.Drawing.Size(85, 17)
         Me.radPersianLime.TabIndex = 1
         Me.radPersianLime.TabStop = True
-        Me.radPersianLime.Text = "Persian Lime ($12.95)"
+        Me.radPersianLime.Text = "Persian Lime"
         Me.radPersianLime.UseVisualStyleBackColor = True
         '
-        'radMeyerLemon
+        'radKeyLime
         '
-        Me.radMeyerLemon.AutoSize = True
-        Me.radMeyerLemon.Location = New System.Drawing.Point(7, 66)
-        Me.radMeyerLemon.Name = "radMeyerLemon"
-        Me.radMeyerLemon.Size = New System.Drawing.Size(131, 17)
-        Me.radMeyerLemon.TabIndex = 2
-        Me.radMeyerLemon.TabStop = True
-        Me.radMeyerLemon.Text = "Meyer Lemon ($13.95)"
-        Me.radMeyerLemon.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(260, 20)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(212, 256)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(19, 138)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Number of Trees"
-        '
-        'txtNumberOfTrees
-        '
-        Me.txtNumberOfTrees.Location = New System.Drawing.Point(22, 167)
-        Me.txtNumberOfTrees.Name = "txtNumberOfTrees"
-        Me.txtNumberOfTrees.Size = New System.Drawing.Size(206, 20)
-        Me.txtNumberOfTrees.TabIndex = 3
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.chkPlanting)
-        Me.GroupBox3.Controls.Add(Me.chkDelivery)
-        Me.GroupBox3.Location = New System.Drawing.Point(22, 206)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(206, 70)
-        Me.GroupBox3.TabIndex = 4
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Additional Services"
-        '
-        'chkDelivery
-        '
-        Me.chkDelivery.AutoSize = True
-        Me.chkDelivery.Location = New System.Drawing.Point(7, 20)
-        Me.chkDelivery.Name = "chkDelivery"
-        Me.chkDelivery.Size = New System.Drawing.Size(91, 17)
-        Me.chkDelivery.TabIndex = 0
-        Me.chkDelivery.Text = "Delivery ($10)"
-        Me.chkDelivery.UseVisualStyleBackColor = True
-        '
-        'chkPlanting
-        '
-        Me.chkPlanting.AutoSize = True
-        Me.chkPlanting.Location = New System.Drawing.Point(7, 44)
-        Me.chkPlanting.Name = "chkPlanting"
-        Me.chkPlanting.Size = New System.Drawing.Size(124, 17)
-        Me.chkPlanting.TabIndex = 1
-        Me.chkPlanting.Text = "Planting ($8 per tree)"
-        Me.chkPlanting.UseVisualStyleBackColor = True
+        Me.radKeyLime.AutoSize = True
+        Me.radKeyLime.Location = New System.Drawing.Point(7, 20)
+        Me.radKeyLime.Name = "radKeyLime"
+        Me.radKeyLime.Size = New System.Drawing.Size(68, 17)
+        Me.radKeyLime.TabIndex = 0
+        Me.radKeyLime.TabStop = True
+        Me.radKeyLime.Text = "Key Lime"
+        Me.radKeyLime.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -191,35 +193,14 @@ Partial Class frmTreeSale
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Customer Details"
         '
-        'Label3
+        'Label5
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 34)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Name"
-        '
-        'txtName
-        '
-        Me.txtName.Location = New System.Drawing.Point(70, 31)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(400, 20)
-        Me.txtName.TabIndex = 1
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(400, 20)
-        Me.TextBox1.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(70, 99)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(400, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(19, 68)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Phone"
         '
         'Label4
         '
@@ -230,14 +211,35 @@ Partial Class frmTreeSale
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Address"
         '
-        'Label5
+        'TextBox2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 68)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Phone"
+        Me.TextBox2.Location = New System.Drawing.Point(70, 99)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(400, 20)
+        Me.TextBox2.TabIndex = 8
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(72, 65)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(400, 20)
+        Me.TextBox1.TabIndex = 7
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(70, 31)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(400, 20)
+        Me.txtName.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(19, 34)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Name"
         '
         'btnSummary
         '
@@ -248,7 +250,7 @@ Partial Class frmTreeSale
         Me.btnSummary.Location = New System.Drawing.Point(47, 544)
         Me.btnSummary.Name = "btnSummary"
         Me.btnSummary.Size = New System.Drawing.Size(126, 23)
-        Me.btnSummary.TabIndex = 3
+        Me.btnSummary.TabIndex = 9
         Me.btnSummary.Text = "View Cost Summary"
         Me.btnSummary.UseVisualStyleBackColor = False
         '
@@ -260,7 +262,7 @@ Partial Class frmTreeSale
         Me.btnClear.Location = New System.Drawing.Point(191, 544)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(126, 23)
-        Me.btnClear.TabIndex = 4
+        Me.btnClear.TabIndex = 10
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -272,9 +274,19 @@ Partial Class frmTreeSale
         Me.btnExit.Location = New System.Drawing.Point(335, 544)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(126, 23)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 11
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.PictureBox1)
+        Me.GroupBox5.Location = New System.Drawing.Point(254, 20)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(218, 256)
+        Me.GroupBox5.TabIndex = 5
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Tree Preview"
         '
         'frmTreeSale
         '
@@ -293,13 +305,14 @@ Partial Class frmTreeSale
         Me.Text = "Florida Exotic Citrus Nursery Tree Sale"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -326,4 +339,5 @@ Partial Class frmTreeSale
     Friend WithEvents btnSummary As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents GroupBox5 As GroupBox
 End Class

@@ -38,8 +38,8 @@ Partial Class frmTreeSale
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSummary = New System.Windows.Forms.Button()
@@ -84,7 +84,7 @@ Partial Class frmTreeSale
         Me.GroupBox5.Location = New System.Drawing.Point(254, 20)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(239, 256)
-        Me.GroupBox5.TabIndex = 5
+        Me.GroupBox5.TabIndex = 4
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Tree Preview"
         '
@@ -104,7 +104,7 @@ Partial Class frmTreeSale
         Me.GroupBox3.Location = New System.Drawing.Point(22, 206)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(206, 70)
-        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Additional Services"
         '
@@ -114,7 +114,7 @@ Partial Class frmTreeSale
         Me.chkPlanting.Location = New System.Drawing.Point(7, 44)
         Me.chkPlanting.Name = "chkPlanting"
         Me.chkPlanting.Size = New System.Drawing.Size(124, 17)
-        Me.chkPlanting.TabIndex = 5
+        Me.chkPlanting.TabIndex = 6
         Me.chkPlanting.Text = "Planting ($8 per tree)"
         Me.chkPlanting.UseVisualStyleBackColor = True
         '
@@ -124,7 +124,7 @@ Partial Class frmTreeSale
         Me.chkDelivery.Location = New System.Drawing.Point(7, 20)
         Me.chkDelivery.Name = "chkDelivery"
         Me.chkDelivery.Size = New System.Drawing.Size(91, 17)
-        Me.chkDelivery.TabIndex = 4
+        Me.chkDelivery.TabIndex = 5
         Me.chkDelivery.Text = "Delivery ($10)"
         Me.chkDelivery.UseVisualStyleBackColor = True
         '
@@ -133,7 +133,7 @@ Partial Class frmTreeSale
         Me.txtNumberOfTrees.Location = New System.Drawing.Point(22, 167)
         Me.txtNumberOfTrees.Name = "txtNumberOfTrees"
         Me.txtNumberOfTrees.Size = New System.Drawing.Size(206, 20)
-        Me.txtNumberOfTrees.TabIndex = 3
+        Me.txtNumberOfTrees.TabIndex = 2
         '
         'Label2
         '
@@ -141,7 +141,7 @@ Partial Class frmTreeSale
         Me.Label2.Location = New System.Drawing.Point(19, 138)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(86, 13)
-        Me.Label2.TabIndex = 2
+        Me.Label2.TabIndex = 1
         Me.Label2.Text = "Number of Trees"
         '
         'GroupBox2
@@ -162,7 +162,7 @@ Partial Class frmTreeSale
         Me.radMeyerLemon.Location = New System.Drawing.Point(7, 66)
         Me.radMeyerLemon.Name = "radMeyerLemon"
         Me.radMeyerLemon.Size = New System.Drawing.Size(89, 17)
-        Me.radMeyerLemon.TabIndex = 2
+        Me.radMeyerLemon.TabIndex = 3
         Me.radMeyerLemon.TabStop = True
         Me.radMeyerLemon.Text = "Meyer Lemon"
         Me.radMeyerLemon.UseVisualStyleBackColor = True
@@ -173,7 +173,7 @@ Partial Class frmTreeSale
         Me.radPersianLime.Location = New System.Drawing.Point(6, 43)
         Me.radPersianLime.Name = "radPersianLime"
         Me.radPersianLime.Size = New System.Drawing.Size(85, 17)
-        Me.radPersianLime.TabIndex = 1
+        Me.radPersianLime.TabIndex = 2
         Me.radPersianLime.TabStop = True
         Me.radPersianLime.Text = "Persian Lime"
         Me.radPersianLime.UseVisualStyleBackColor = True
@@ -184,7 +184,7 @@ Partial Class frmTreeSale
         Me.radKeyLime.Location = New System.Drawing.Point(7, 20)
         Me.radKeyLime.Name = "radKeyLime"
         Me.radKeyLime.Size = New System.Drawing.Size(68, 17)
-        Me.radKeyLime.TabIndex = 0
+        Me.radKeyLime.TabIndex = 1
         Me.radKeyLime.TabStop = True
         Me.radKeyLime.Text = "Key Lime"
         Me.radKeyLime.UseVisualStyleBackColor = True
@@ -193,8 +193,8 @@ Partial Class frmTreeSale
         '
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Controls.Add(Me.TextBox2)
-        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.Controls.Add(Me.txtAddress)
+        Me.GroupBox4.Controls.Add(Me.txtPhone)
         Me.GroupBox4.Controls.Add(Me.txtName)
         Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Location = New System.Drawing.Point(46, 389)
@@ -210,7 +210,7 @@ Partial Class frmTreeSale
         Me.Label5.Location = New System.Drawing.Point(19, 68)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
-        Me.Label5.TabIndex = 5
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Phone"
         '
         'Label4
@@ -219,29 +219,29 @@ Partial Class frmTreeSale
         Me.Label4.Location = New System.Drawing.Point(19, 102)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 13)
-        Me.Label4.TabIndex = 4
+        Me.Label4.TabIndex = 0
         Me.Label4.Text = "Address"
         '
-        'TextBox2
+        'txtAddress
         '
-        Me.TextBox2.Location = New System.Drawing.Point(70, 99)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(417, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.txtAddress.Location = New System.Drawing.Point(70, 99)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(417, 20)
+        Me.txtAddress.TabIndex = 9
         '
-        'TextBox1
+        'txtPhone
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(415, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.txtPhone.Location = New System.Drawing.Point(72, 65)
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(415, 20)
+        Me.txtPhone.TabIndex = 8
         '
         'txtName
         '
         Me.txtName.Location = New System.Drawing.Point(70, 31)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(417, 20)
-        Me.txtName.TabIndex = 6
+        Me.txtName.TabIndex = 7
         '
         'Label3
         '
@@ -261,7 +261,7 @@ Partial Class frmTreeSale
         Me.btnSummary.Location = New System.Drawing.Point(46, 544)
         Me.btnSummary.Name = "btnSummary"
         Me.btnSummary.Size = New System.Drawing.Size(126, 23)
-        Me.btnSummary.TabIndex = 9
+        Me.btnSummary.TabIndex = 10
         Me.btnSummary.Text = "View Cost Summary"
         Me.btnSummary.UseVisualStyleBackColor = False
         '
@@ -273,7 +273,7 @@ Partial Class frmTreeSale
         Me.btnClear.Location = New System.Drawing.Point(190, 544)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(126, 23)
-        Me.btnClear.TabIndex = 10
+        Me.btnClear.TabIndex = 11
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = False
         '
@@ -285,7 +285,7 @@ Partial Class frmTreeSale
         Me.btnExit.Location = New System.Drawing.Point(334, 544)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(126, 23)
-        Me.btnExit.TabIndex = 11
+        Me.btnExit.TabIndex = 12
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -333,8 +333,8 @@ Partial Class frmTreeSale
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents txtPhone As TextBox
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnSummary As Button

@@ -56,4 +56,31 @@
             picTreePreview.Load("Resources\" & strTreePreviewImage)
         End If
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        Dim i As Integer
+
+        'clear the radio buttons
+        For i = 0 To arrRadTreeType.Length - 1
+            arrRadTreeType(i).Checked = False
+        Next
+
+        'clear the check boxes
+        For i = 0 To arrChkAdditionalServices.Length - 1
+            arrChkAdditionalServices(i).Checked = False
+        Next
+
+        'clear the text boxes
+        txtNumberOfTrees.Clear()
+        txtName.Clear()
+        txtPhone.Clear()
+        txtAddress.Clear()
+
+        'clear the variables
+
+    End Sub
 End Class

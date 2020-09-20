@@ -13,6 +13,8 @@
     Private strTreeType As String
     Private decTreeCost As Decimal
 
+    Private Summary As frmSummary
+
     Private Sub LoadControlArrays()
         arrRadTreeType(0) = radKeyLime
         arrRadTreeType(1) = radPersianLime
@@ -78,7 +80,7 @@
 
         'Clear the variables
         strTreeType = ""
-        decTreeCost = ""
+        decTreeCost = 0.0
 
     End Sub
 
@@ -113,6 +115,38 @@
 
         decTotalNetCost = decTotalCost * (100 + TAX_RATE) / 100
 
+        'Populate the summary form with the data
+        Summary = New frmSummary
+
+        Summary.lblName.Text = txtName.Text
+        Summary.lblPhone.Text = txtPhone.Text
+        Summary.lblAddress.Text = txtAddress.Text
+
+        Summary.lblTreeType.Text = strTreeType & " Tree Type"
+        Summary.lblTreeTypePrice.Text = decTreeCost
+        Summary.lblTreeQuantity.Text = txtNumberOfTrees.Text
+        Summary.lblTreeCost.Text = decTreePurchaseCost
+
+        Summary.lblDelivery.Text = chkDelivery.Text
+        If intDeliveryFee <> 0 Then
+            Summary.lblDeliveryPrice.Text = DELIVERY_FEE
+        End If
+        Summary.lblDeliveryCost.Text = intDeliveryFee
+
+        Summary.lblPlanting.Text = chkPlanting.Text
+        If intPlantingFee <> 0 Then
+            Summary.lblPlantingPrice.Text = PLANTING_FEE
+            Summary.lblPlantingQuantity.Text = txtNumberOfTrees.Text
+        End If
+        Summary.lblPlantingCost.Text = intPlantingFee
+
+        Summary.lblGrossTotal.Text = Math.Round(decTotalCost, 2)
+        Summary.lblTaxRate.Text = TAX_RATE & "%"
+        Summary.lblNetTotal.Text = Math.Round(decTotalNetCost, 2)
+
+        Summary.ShowDialog()
+
+        btnClear.PerformClick()
     End Sub
 
     Private Function ValidateData()

@@ -10,3 +10,4 @@ D:\Development\VisualStudio\WindowsProgramming\homework-1-SultanAbuhaqab\Nursery
 D:\Development\VisualStudio\WindowsProgramming\homework-1-SultanAbuhaqab\NurseryTreesSale\NurseryTreesSale\obj\Debug\NurseryTreesSale.exe
 D:\Development\VisualStudio\WindowsProgramming\homework-1-SultanAbuhaqab\NurseryTreesSale\NurseryTreesSale\obj\Debug\NurseryTreesSale.xml
 D:\Development\VisualStudio\WindowsProgramming\homework-1-SultanAbuhaqab\NurseryTreesSale\NurseryTreesSale\obj\Debug\NurseryTreesSale.pdb
+D:\Development\VisualStudio\WindowsProgramming\homework-1-SultanAbuhaqab\NurseryTreesSale\NurseryTreesSale\obj\Debug\NurseryTreesSale.frmSummary.resources

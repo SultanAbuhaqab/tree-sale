@@ -166,6 +166,7 @@ Partial Class frmTreeSale
         Me.radMeyerLemon.Name = "radMeyerLemon"
         Me.radMeyerLemon.Size = New System.Drawing.Size(89, 17)
         Me.radMeyerLemon.TabIndex = 3
+        Me.radMeyerLemon.TabStop = True
         Me.radMeyerLemon.Text = "Meyer Lemon"
         Me.radMeyerLemon.UseVisualStyleBackColor = True
         '
@@ -176,6 +177,7 @@ Partial Class frmTreeSale
         Me.radPersianLime.Name = "radPersianLime"
         Me.radPersianLime.Size = New System.Drawing.Size(85, 17)
         Me.radPersianLime.TabIndex = 2
+        Me.radPersianLime.TabStop = True
         Me.radPersianLime.Text = "Persian Lime"
         Me.radPersianLime.UseVisualStyleBackColor = True
         '
@@ -186,6 +188,7 @@ Partial Class frmTreeSale
         Me.radKeyLime.Name = "radKeyLime"
         Me.radKeyLime.Size = New System.Drawing.Size(68, 17)
         Me.radKeyLime.TabIndex = 1
+        Me.radKeyLime.TabStop = True
         Me.radKeyLime.Text = "Key Lime"
         Me.radKeyLime.UseVisualStyleBackColor = True
         '

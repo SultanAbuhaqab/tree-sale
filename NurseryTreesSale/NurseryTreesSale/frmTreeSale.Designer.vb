@@ -40,13 +40,13 @@ Partial Class frmTreeSale
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.txtPhone = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnSummary = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.errP = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.mskPhone = New System.Windows.Forms.MaskedTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.picTreePreview, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -194,10 +194,10 @@ Partial Class frmTreeSale
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.mskPhone)
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.txtAddress)
-        Me.GroupBox4.Controls.Add(Me.txtPhone)
         Me.GroupBox4.Controls.Add(Me.txtName)
         Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Location = New System.Drawing.Point(46, 389)
@@ -212,32 +212,25 @@ Partial Class frmTreeSale
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(19, 68)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.Size = New System.Drawing.Size(45, 13)
         Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Phone"
+        Me.Label5.Text = "Address"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(19, 102)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Address"
+        Me.Label4.Text = "Phone"
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(70, 99)
+        Me.txtAddress.Location = New System.Drawing.Point(70, 65)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(417, 20)
-        Me.txtAddress.TabIndex = 9
-        '
-        'txtPhone
-        '
-        Me.txtPhone.Location = New System.Drawing.Point(72, 65)
-        Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(415, 20)
-        Me.txtPhone.TabIndex = 8
+        Me.txtAddress.TabIndex = 8
         '
         'txtName
         '
@@ -296,6 +289,15 @@ Partial Class frmTreeSale
         '
         Me.errP.ContainerControl = Me
         '
+        'mskPhone
+        '
+        Me.mskPhone.Location = New System.Drawing.Point(70, 99)
+        Me.mskPhone.Mask = "(999) 000-0000"
+        Me.mskPhone.Name = "mskPhone"
+        Me.mskPhone.Size = New System.Drawing.Size(417, 20)
+        Me.mskPhone.TabIndex = 9
+        Me.mskPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals
+        '
         'frmTreeSale
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -342,7 +344,6 @@ Partial Class frmTreeSale
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents txtAddress As TextBox
-    Friend WithEvents txtPhone As TextBox
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnSummary As Button
@@ -350,4 +351,5 @@ Partial Class frmTreeSale
     Friend WithEvents btnExit As Button
     Friend WithEvents GroupBox5 As GroupBox
     Friend WithEvents errP As ErrorProvider
+    Friend WithEvents mskPhone As MaskedTextBox
 End Class

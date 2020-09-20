@@ -88,7 +88,7 @@ Partial Class frmSummary
         '
         Me.lblAddress.BackColor = System.Drawing.Color.White
         Me.lblAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblAddress.Location = New System.Drawing.Point(74, 96)
+        Me.lblAddress.Location = New System.Drawing.Point(74, 56)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(316, 23)
         Me.lblAddress.TabIndex = 5
@@ -98,7 +98,7 @@ Partial Class frmSummary
         '
         Me.lblPhone.BackColor = System.Drawing.Color.White
         Me.lblPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPhone.Location = New System.Drawing.Point(74, 56)
+        Me.lblPhone.Location = New System.Drawing.Point(74, 96)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(316, 23)
         Me.lblPhone.TabIndex = 4
@@ -109,18 +109,18 @@ Partial Class frmSummary
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(23, 61)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 13)
+        Me.Label4.Size = New System.Drawing.Size(45, 13)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Phone"
+        Me.Label4.Text = "Address"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(23, 101)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.Size = New System.Drawing.Size(38, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Address"
+        Me.Label3.Text = "Phone"
         '
         'lblName
         '
@@ -414,6 +414,7 @@ Partial Class frmSummary
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmSummary"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tree Order Summary"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

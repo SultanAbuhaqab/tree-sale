@@ -1,4 +1,8 @@
-﻿Public Class frmTreeSale
+﻿'Name: Sultan Abuhaqab
+'Date: 20/09/2020
+'I affirm that this program was created by Me. It Is solely my work And does Not include any work done by anyone Else.
+
+Public Class frmTreeSale
     'Define the constants needed in the program
     Private Const KEY_LIME_PRICE As Decimal = 15.95
     Private Const PERSIAN_LIME_PRICE As Decimal = 12.95
@@ -75,7 +79,7 @@
         'Clear the text boxes
         txtNumberOfTrees.Clear()
         txtName.Clear()
-        txtPhone.Clear()
+        mskPhone.Clear()
         txtAddress.Clear()
 
         'Clear the variables
@@ -119,7 +123,7 @@
         Summary = New frmSummary
 
         Summary.lblName.Text = txtName.Text
-        Summary.lblPhone.Text = txtPhone.Text
+        Summary.lblPhone.Text = mskPhone.Text
         Summary.lblAddress.Text = txtAddress.Text
 
         Summary.lblTreeType.Text = strTreeType & " Tree Type"
@@ -174,8 +178,8 @@
         End If
 
         'Validate the phone text box
-        If txtPhone.Text = "" Then
-            errP.SetError(txtPhone, "You must provide your phone number")
+        If mskPhone.Text = "" Then
+            errP.SetError(mskPhone, "You must provide your phone number")
             binErrors = True
         End If
 

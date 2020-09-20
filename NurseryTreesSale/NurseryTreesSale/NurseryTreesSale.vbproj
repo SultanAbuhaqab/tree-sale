@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSummary.Designer.vb">
+      <DependentUpon>frmSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTreeSale.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmSummary.resx">
+      <DependentUpon>frmSummary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTreeSale.resx">
       <DependentUpon>frmTreeSale.vb</DependentUpon>
     </EmbeddedResource>
